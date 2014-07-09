@@ -37,7 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sms',
-    'django_twilio'
+    'django_twilio',
+    'crispy_forms'
 
 )
 
@@ -83,3 +84,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TWILIO_ACCOUNT_SID = "ACf5a68c6fa60b5da2d95b5a16b7d4a4b0"
+TWILIO_AUTH_TOKEN  = "7f141914d2a71cf9f0e1dbf04338ea5c"
+
+DJANGO_TWILIO_FORGERY_PROTECTION = False
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
