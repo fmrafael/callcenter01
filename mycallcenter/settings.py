@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -38,7 +43,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'sms',
     'django_twilio',
-    'crispy_forms'
+    'crispy_forms',
+    'bootstrap3'
 
 )
 
@@ -91,3 +97,60 @@ TWILIO_AUTH_TOKEN  = "7f141914d2a71cf9f0e1dbf04338ea5c"
 DJANGO_TWILIO_FORGERY_PROTECTION = False
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+
+BOOTSTRAP3 = {
+
+    # The URL to the jQuery JavaScript file
+    'jquery_url': '//code.jquery.com/jquery.min.js',
+
+    # The Bootstrap base URL
+    'base_url': '//netdna.bootstrapcdn.com/bootstrap/3.2.0/',
+
+    # The complete URL to the Bootstrap CSS file (None means derive it from base_url)
+    'css_url': None,
+
+    # The complete URL to the Bootstrap CSS file (None means no theme)
+    'theme_url': None,
+
+    # The complete URL to the Bootstrap JavaScript file (None means derive it from base_url)
+    'javascript_url': None,
+
+    # Put JavaScript in the HEAD section of the HTML document (only relevant if you use bootstrap3.html)
+    'javascript_in_head': False,
+
+    # Include jQuery with Bootstrap JavaScript (affects django-bootstrap3 template tags)
+    'include_jquery': False,
+
+    # Label class to use in horizontal forms
+    'horizontal_label_class': 'col-md-2',
+
+    # Field class to use in horiozntal forms
+    'horizontal_field_class': 'col-md-4',
+
+    # Set HTML required attribute on required fields
+    'set_required': True,
+
+    # Set placeholder attributes to label if no placeholder is provided
+    'set_placeholder': True,
+
+    # Class to indicate required (better to set this in your Django form)
+    'form_required_class': '',
+
+    # Class to indicate error (better to set this in your Django form)
+    'form_error_class': '',
+
+    # Renderers (only set these if you have studied the source and understand the inner workings)
+    'formset_renderers':{
+        'default': 'bootstrap3.renderers.FormsetRenderer',
+    },
+    'form_renderers': {
+        'default': 'bootstrap3.renderers.FormRenderer',
+    },
+    'field_renderers': {
+        'default': 'bootstrap3.renderers.FieldRenderer',
+        'inline': 'bootstrap3.renderers.InlineFieldRenderer',
+    },
+}
