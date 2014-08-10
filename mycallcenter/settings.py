@@ -44,7 +44,8 @@ INSTALLED_APPS = (
     'sms',
     'django_twilio',
     'crispy_forms',
-    'bootstrap3'
+    'bootstrap3',
+    'twilio'
 
 )
 
@@ -154,3 +155,6 @@ BOOTSTRAP3 = {
         'inline': 'bootstrap3.renderers.InlineFieldRenderer',
     },
 }
+
+
+DEFAULT_CHARSET = 'utf-8'

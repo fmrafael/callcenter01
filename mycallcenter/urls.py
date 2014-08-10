@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^sms/$', 'sms.views.sms'),
-    url(r'^thanks/$', 'sms.views.thanks')
+    url(r'^gather/$', 'sms.views.gather'),
+    url(r'^thanks/$', 'sms.views.thanks'),
+    url(r'^response/$', 'sms.views.handle_response')
 )

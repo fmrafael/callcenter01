@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | Triangle</title>
+    <title>Home | MyCallCenter. Are you experienced?'</title>
     
     <link href="{% static "sms/css/bootstrap.min.css" %}" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -46,10 +46,7 @@
                 <div class="col-sm-12 overflow">
                    <div class="social-icons pull-right">
                         <ul class="nav nav-pills">
-                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href=""><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>                                                  
                             <li><a href=""><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div> 
@@ -127,9 +124,10 @@
         <div class="container">
             <div class="main-slider">
                 <div class="slide-text">
-                    <h1>We Are Creative Nerds</h1>
-                    <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
-                    <a href="#" class="btn btn-common">SIGN UP</a>
+                    <h1><strong>Olá, prazer.<br>Somos a MyCallCenter.</strong></h1>                
+                    <h2>Atendimento ao Cliente do jeito certo:  <br>ágil, flexível e escalável.</h2>
+                    
+                    <a href="#" class="btn btn-common">SAIBA MAIS</a>
                 </div>
                 <img src="{% static "sms/images/home/slider/slide1/house.png" %}" class="img-responsive slider-house" alt="slider image"/>
                 <img src="{% static "sms/images/home/slider/slide1/circle1.png" %}" class="slider-circle1" alt="slider image"/>
@@ -325,27 +323,20 @@
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <div class="contact-form bottom">
-                        <h2>Send a message</h2>
-                        <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
+                        <h2>Saiba mais</h2>
+                        
                             <div class="form-group">
-                                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+                            	{% crispy Cliente_sms Cliente_sms.helper %}
+                                
                             </div>
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
-                            </div>
-                            <div class="form-group">
-                                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
-                            </div>                        
-                            <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-submit" value="Submit">
-                            </div>
-                        </form>
+                           
+                       
                     </div>
                 </div>
                 <div class="col-sm-12">
                     <div class="copyright-text text-center">
-                        <p>&copy; Your Company 2014. All Rights Reserved.</p>
-                        <p>Designed by <a target="_blank" href="http://www.themeum.com">Themeum</a></p>
+                        <p>&copy; MyCallCenter 2014.</p>
+                        <p>MyCallCenter, MyCallCenter_Voice, C.ex: Customer Experience e Are you Experienced?' são marcas registradas. Todos os direitos reservados.</p>
                     </div>
                 </div>
             </div>
@@ -359,7 +350,7 @@
     <script type="text/javascript" src="{% static "sms/js/wow.min.js" %}"></script>
     <script type="text/javascript" src="{% static "sms/js/main.js" %}"></script>
 
-{% crispy Cliente_sms Cliente_sms.helper %}    
+    
 </body>
 </html>
 
